@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Categoria</title>
+    <link rel="stylesheet" href="../css/style.CSS">
+    <script src="https://kit.fontawesome.com/ae3ca4976e.js"  crossorigin="anonymous"></script>
+    
+</head>
+<style>
+  /* geral */
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .corpo{
+    margin-top: 8vh;
+  }
+  
+  input, label {
+    display: block;
+    outline: none;
+    width: 100%;
+  }
+
+  html{
+    background: #fae5c4;
+  }
+
+  .content{
+    background: #fae5c4;
+  }
+  
+  /* form */
+  #main-container {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #837268;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    margin-top: 15vh;
+   
+  }
+  
+  #main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #fae5c4;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .full-box {
+    flex: 1 1 100%;
+    position: relative;
+  }
+  
+  .half-box {
+    flex: 1 1 45%;
+    position: relative;
+  }
+  
+  .cat{
+    margin-left: 5%;
+    margin-right: -60%;
+  }
+  
+  .spacing{
+    margin-left: 5%;
+  }
+  
+  
+  label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fae5c4;
+  }
+  
+  input {
+    border-bottom: 2px solid #fae5c4;
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    background: #837268;
+    color: black;
+  }
+  
+  input[type="date"]{
+    color: black;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: #fae5c4;
+    color: black;
+    font-size: 1rem;
+  
+  }
+  
+  input[type="submit"] {
+    background-color: #504843;
+    color: #fae5c4;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 40%;
+    margin-left: 30%;
+    font-size: 1rem;
+    font-family: georgia;
+    
+  }
+  
+  input::placeholder{
+    color: black;
+    font-size: 1rem;
+  }
+  
+</style>
+<body>
+  <div class="container">
+    <header class="header">
+        <div class="logo">
+            <img src="../imgs/logo.png" alt="Logotipo do curiousbooks" width="50" height="40">
+            <a href="indexadm.php"><h3>CURIOUSBOOKS</h3></a>
+        </div>
+        <a class="active" href="indexadm.php"><label>Menu</label></a>
+        <a href="sobreA.html"><label>Sobre</label></a>
+        <a href="contatoA.html"><label>Contato</label></a>
+       
+        <div class="icon-menu"></div>
+    </header><!-- Fim header -->
+    <div class="menu">
+      <nav class="navigation-menu">
+        <br>
+        <ul class="list-nav-second ">
+            <div class="link-nav-arrow">
+                <li class="item-nav">
+                    <a class="link-nav" href="meuperf.php">
+                    <i class="fas fa-book icon"></i>
+                        Meu Perfil
+                    </a>
+                </li>
+
+                <li class="item-nav">
+                    <a class="link-nav" href="cad_livro2.php">
+                    <i class="fa-solid fa-plus icon"></i>
+                        Livro
+                    </a>
+                </li>
+
+                <li class="item-nav">
+                    <a class="link-nav" href="categoria.html">
+                    <i class="fa-solid fa-plus icon"></i>
+                        Categoria
+                    </a>
+                </li>
+
+                <li class="item-nav">
+                    <a class="link-nav" href="sair.php">
+                    <i class="fa-sharp fa-solid fa-circle-xmark icon"></i>
+                        Sair
+                    </a>
+                </li>
+                <br><br>
+            </div>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+
+      <div class="page">  
+        <div id="main-container"><br>
+            <h1><i class="fa-solid fa-plus icon"></i> Cadastrar Nova Categoria</h1>
+          
+            <form id="register-form" action="categoria.php" method="POST">
+              <div class="full-box">
+                <label for="nome">Categoria:</label>
+                <input type="text" name="categ" id="categ" placeholder="Digite a Categoria" data-min-length="1">
+              </div>
+
+              <div class="full-box">
+                <input id="btn-submit" type="submit" value="ADICIONAR">
+              </div>
+
+            </form>
+          </div>
+        
+      </div>
+    </div>
+      <footer>
+        <h6>&copy; Copyright 2022 curiousbooks.com.br - Todos os Direitos Reservados</h6>
+      </footer>
+</div>    
+</body>
+</html>

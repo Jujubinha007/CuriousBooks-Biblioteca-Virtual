@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="../css/style.CSS">
+    <script src="https://kit.fontawesome.com/ae3ca4976e.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+        
+    }
+
+    .box .search-box{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    #check:checked ~ .search-box{
+        max-width: 100%;
+    }
+
+    .search-box input{
+        height: 100%;
+        width: 99%;
+        background: white;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.452);
+        outline: none;
+        border: none;
+        padding-left: 20px;
+        font-size: 18px;
+    }
+
+    .search-box input::placeholder{
+        color: #302B28;
+    }
+    .search-box .iconS{
+        position: absolute;
+        right: -12px;
+        top: 0;
+        width: 50px;
+        background: #302B28;
+        height: 100%;
+        text-align: center;
+        line-height: 50px;
+        color: #FFDEAD;
+        font-size: 20px;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+
+    }
+
+    #check:checked ~ .search-box .iconS{
+        background: #302B28;
+        color: #FFDEAD;
+        width: 60px;
+        border-radius: 0 25px 25px 0;
+    }
+
+    #check{
+        display: none;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../imgs/logo.png" alt="Logotipo do curiousbooks" width="50" height="40">
+                <h3>CURIOUSBOOKS</h3>
+            </div>
+            <a class="active" href="index.php"><label>Menu</label></a>
+            <a href="sobre.html"><label>Sobre</label></a>
+            <a href="contato.html"><label>Contato</label></a>
+           
+            <div class="icon-menu">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line class="firstline" x1="0" y1="5" x2="37" y2="5" stroke="#FFDEAD"/>
+                    <line class="secondline" y1="15" x2="30" y2="15" stroke="#FFDEAD"/>
+                    <line class="thirdline" y1="25" x2="37" y2="25" stroke="#FFDEAD"/>
+                </svg>
+
+            </div>
+        </header><!-- Fim header -->
+        <div class="menu">
+            <nav class="navigation-menu">
+                
+                <ul class="list-nav">
+                   
+                    <li class="item-nav">
+                        <a class="link-nav link-nav-arrow" href="#">
+                        <i class="fa-solid fa-bookmark icon"></i>
+                            Categorias
+                        </a>
+                    </li>
+                    <ul class="list-nav-second hide">
+                        <li class="item-nav-second">
+                            <a href="#">
+                                Terror
+                            </a>
+                        </li>
+                        <li class="item-nav-second">
+                            <a href="#">
+                                Aventura
+                            </a>
+                        </li>
+                        <li class="item-nav-second">
+                            <a href="#">
+                                Romance
+                            </a>
+                        </li>
+                        <li class="item-nav-second">
+                            <a href="#">
+                                Clássicos
+                            </a>
+                        </li>
+                    </ul>
+                    <li class="item-nav">
+                        <a class="link-nav link-nav-exemplo" href="minhabiblio.php">
+                        <i class="fas fa-book icon"></i>
+                            Minha Biblioteca
+                        </a>    
+                    </li>
+                    <li class="item-nav">
+                        <a class="link-nav" href="descubra.html">
+                        <i class="fas fa-magnifying-glass icon"></i>
+                            Descubra
+                        </a>
+                    </li>
+                    <li class="item-nav">
+                        <a class="link-nav" href="ajuda.html">
+                        <i class="fas fa-circle-info icon"></i>
+                            Ajuda
+                        </a>
+                    </li>
+                    <li class="item-nav-cad">
+                        <a class="link-nav" href="login.html">
+                        <i class="fa-solid fa-user icon"></i>
+                            Cadastrar-se
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- Fim nav -->
+        </div><!-- Fim menu -->
+
+        <div class="content">
+            <div class="page">
+                    <!--linha 1-->
+                    <h1 class="title">Buscar:</h1>
+                    <div class="box">
+                        <div class="search-box">
+                            <input type="text" placeholder="Pesquise aqui...">
+                            <label for="" class="iconS">
+                                <i class="fas fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                    </div>
+                <br><br>
+                <p>Destaques:</p>
+                    
+                <!--Livros-->
+                <main class="cards">
+                    <section class="card contact">
+                        <div class="icon">
+                            <img src="../Capas/livro3.webp" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card shop">
+                        <div class="icon">
+                            <img src="../Capas/livro2.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro1.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro4.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro5.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro6.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro1.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro2.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                </main>
+
+                <!--linha 2-->
+               <br>
+                <p>Recentes:</p>
+                
+                <!--Livros-->
+                <main class="cards">
+                    <section class="card contact">
+                        <div class="icon">
+                            <img src="../Capas/livro3.webp" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card shop">
+                        <div class="icon">
+                            <img src="../Capas/livro2.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro1.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro4.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro5.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro6.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro1.jpg" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                    <section class="card about">
+                        <div class="icon">
+                            <img src="../Capas/livro2.png" alt="About us.">
+                        </div>
+                        <br>
+                        <button>Learn More</button>
+                    </section>
+                
+                </main>
+            </div>
+                <footer>
+                    <h6>&copy; Copyright 2022 curiousbooks.com.br - Todos os Direitos Reservados</h6>
+                </footer>
+        </div>
+           
+    <script src="https://kit.fontawesome.com/892399f368.js" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

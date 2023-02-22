@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar-se</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<style>
+    .card-login .voltar{
+        text-decoration: none;
+        font-size: 2em;
+        color: #fae5c4;
+        font-family:'Arial Narrow Bold';
+        font-weight: bold;
+        float: right;
+        margin-top: -5%;
+        margin-right: -100%;
+    }
+</style>
+</style>
+<body>
+<form name="login" action="login.php" method="POST">
+    <div class="main-login">
+        <div class="left-login">
+            <img src="../imgs/logo.png" class="left-login-image" alt="livro">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <a href="index.php" class="voltar">X</a>
+                <h1>Login</h1>
+                <div class="textfield">
+                    <label for="nome">Usuário:</label></h2>
+                    <input type="text" name="nome" placeholder="Seu usuário...">
+                </div><br>
+                <div class="textfield">
+                    <label for="senha">Senha:</label></h2>
+                    <input type="password" name="senha" placeholder="Sua senha..."><br>
+                </div>
+                <button class="btn-login">Entrar</button>
+                <h6>Não sou cadastrado: <a href="cadastrar.php">Clique aqui</a></h6>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
